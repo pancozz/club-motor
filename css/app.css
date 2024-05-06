@@ -1,0 +1,642 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+
+    height: 100vh;
+    margin: 0;
+
+}
+
+header.navbar-container {
+    width: 100%;
+    padding-block: 2rem;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+}
+
+header.navbar-container .logo img {
+    width: 250px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li.active a {
+    background-color: #f19123;
+    color: white;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #f19123;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 10px;
+    /* Add margin between "About Us" and dropdown content */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:not(:last-child) {
+    margin-bottom: 5px;
+    /* Add margin between menu items */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    flex: 1;
+
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+main .content .content-description {
+    flex: 1 1;
+}
+
+main .content .content-description .title {
+    margin-block: 1rem;
+
+    font-size: 3.5rem;
+}
+
+main .content .content-description p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+main .content .content-description button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+
+    background-color: #f19123;
+
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+    border: 3px solid #2d3e50;
+    background-color: transparent;
+
+    color: #2d3e50;
+}
+
+main .content .content-image {
+    flex: 1;
+
+    display: flex;
+}
+
+main .content .content-image img {
+    width: 400px;
+    min-width: 250px;
+    margin: auto;
+}
+
+.profile-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* Warna latar belakang */
+    text-align: center;
+}
+
+.profile-section button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+
+    background-color: #6b2b11;
+
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+.profile-section button:hover {
+    border: 3px solid #2d3e50;
+    background-color: transparent;
+
+    color: #2d3e50;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature-item {
+    background: white;
+    border: 1px solid #ccc;
+    /* Border ringan */
+    border-radius: 8px;
+    /* Sudut border yang melengkung */
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Bayangan ringan */
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-item:hover {
+    transform: translateY(-15px);
+    /* Efek hover dengan sedikit angkat */
+}
+
+.feature-item img {
+    width: 100%;
+    /* Lebar gambar penuh sesuai container */
+    height: auto;
+    /* Tinggi gambar otomatis */
+    border-radius: 8px 8px 0 0;
+    /* Melengkung di bagian atas saja */
+}
+
+.feature-item h3 {
+    color: #333;
+    /* Warna teks untuk judul */
+    margin-top: 10px;
+}
+
+.feature-item p {
+    color: #666;
+    /* Warna teks untuk paragraf */
+    font-size: 14px;
+    line-height: 1.6;
+    /* Jarak antar baris */
+}
+
+.product-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    margin: 10px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 10px;
+    width: 30%;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    color: #333;
+}
+
+.product-item p {
+    color: #666;
+}
+
+/* CSS for product management section */
+.product-management {
+    margin-top: 20px;
+
+}
+
+.product-management .card .product-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    gap: 10%;
+}
+
+.product-actions button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+
+    background-color: #6b2b11;
+
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+.product-actions button:hover {
+    border: 3px solid #2d3e50;
+    background-color: transparent;
+
+    color: #2d3e50;
+}
+
+/* visimisi.css */
+
+.vision-mission {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.vision-mission h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+/* CSS for company-info section in about.html */
+
+.company-info {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.company-info h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.company-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* kontak.css */
+
+.contact-section .container {
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-section img {
+    color: #666;
+    text-align: center;
+    width: 19%;
+    display: inline-block;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6b2b11;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.contact-section button:hover {
+    background-color: #4a1a08;
+}
+
+/* aside.css */
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: auto;
+    background-color: #6b2b11;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+
+    transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+    color: #ff8150;
+}
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+    }
+
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .content .content-description .title {
+        font-size: 3rem;
+    }
+
+    main .content .content-description p {
+        font-size: 1rem;
+    }
+
+    main .content .content-image {
+        order: -1;
+    }
+}
+
+
+
+.footer-container {
+    margin-top: 9%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 10px;
+    color: #333;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.testimoni-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimoni-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.testimoni-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.testimoni-item p {
+    font-style: italic;
+}
+
+/* CSS for news-like card styling */
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 2s;
+}
+
+.card:hover {
+    transform: scale(1.5);
+}
+
+.card h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* CSS for event cards */
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.event-card-header {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.event-card-body {
+    padding: 10px;
+}
+
+.event {
+    margin-bottom: 20px;
+    /* Increased margin for spacing */
+    border: 1px solid #ccc;
+    /* Add border to separate events */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.event h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+    /* Larger font size for event titles */
+}
+
+.event p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 1em;
+    /* Font size for event details */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    flex-direction: column;
+    transition: opacity 0.3s;
+}
+
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-overlay h3 {
+    font-size: 1.2rem;
+}
+
+.photo-overlay p {
+    display: inline;
+    font-size: 1.2rem;
+    text-align: center;
+}
